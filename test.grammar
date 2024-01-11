@@ -1,0 +1,48 @@
+X ->  R len ( 0.3 0.3 ) R thickness ( 1.75 1.75 ) R* count ( 63 63 ) A ( 90 0 ) [ Y ] 
+
+
+
+
+Y 1 len count thickness->  YB
+
+
+
+
+Y1 ->  S ( 1 1+len*(Y_count) 1 ) [ D ( 1 1+(Y_count+1)*len 1 ) I ( CubeX 2 0 1 ) ] 
+Y2 ->  S ( 1 1+len*(Y_count) 1 ) [ D ( 1 1/(1+len*(Y_count)) 1 ) I ( CubeX 2 0 1 ) ] 
+
+
+
+YA 1 ->  A ( 360/count 2 ) [ T ( 5 0 0 ) A ( 90 2 ) YA2  YA1 ]
+
+
+YA1 ->  [ A ( 90 2 )  YB ] 
+YA2 ->  [ A ( 90 2 ) S ( 1 -1 1 ) YB ] 
+
+YB -> S ( thickness 0.1+len 1 )  D ( 1 0.1+len 1 ) I ( CubeX 2 0 1 )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
